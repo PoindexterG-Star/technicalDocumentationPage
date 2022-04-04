@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MS-DOS</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <nav id="navbar">
+            <header>Comando Basicos MS-DOS</header>
+            <ul>
+            <li><a class="nav-link" href="#Inicio">Inicio</a></li>
+            <li>
+                <a class="nav-link" href="#Comodines">Comodines</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Ayuda-MSDOS">Ayuda-MSDOS</a>
+            </li>
+            <li><a class="nav-link" href="#Gestion_de_directores">Gestion de directores</a></li>
+            <li><a class="nav-link" href="#Gestion_de_archivos">Gestion de archivos</a></li>
+            <li>
+                <a class="nav-link" href="#Atributos_de_los_ficheros">Atributos de los ficheros</a>
+            </li>
+            <li><a class="nav-link" href="#Discos_y_disquetes">Discos y disquetes</a></li>
+            <li><a class="nav-link" href="#Otros">Otros</a></li>
+            <li><a class="nav-link" href="#Redireccionamientos">Redireccionamientos</a></li>
+            <li><a class="nav-link" href="#Filtros">Filtros</a></li>
+            <li><a class="nav-link" href="#Reference">Reference</a></li>
+            </ul>
+        </nav>
+        <main id="main-doc">
+            <section class="main-section" id="Inicio">
+            <header>Inicio</header>
+            <article>
+                <p>
+                Para iniciar DOS en Windows XP, hay que irse al botón de Inicio, Ejecutar y poner cmd. Se abrirá una ventana de DOS en la que se probarán
+                todas las opciones de los comandos utilizados.
+                </p>
+            </article>
+            </section>
+            <section class="main-section" id="Comodines">
+            <header>Comodines</header>
+            <article>
+                <ul>
+                <li>
+                    ?: Sustituye a un sólo carácter. Se puede utilizar más de un signo de interrogación seguido para hacerlos corresponder con un número
+                    determinado de caracteres. Así, si ponemos ‘comandobusqueda a???.txt’, el comando ‘comandobusqueda’ nos devolverá el listado de ficheros
+                    que tengan extensión .txt, que empiezan por ‘a’ y le siguen tres caracteres.
+                </li>
+                <li>∗: Sustituye cadenas de caracteres. Por ejemplo si queremos buscar los ficheros que tengan extensión txt, deberemos poner
+                    ‘comandobusqueda *.txt’.</li>
+                </ul>
+            </article>
+            </section>
+            <section class="main-section" id="Ayuda-MSDOS">
+            <header>Ayuda-MSDOS</header>
+            <article>
+                <p>
+                MSDOS, cuenta con una ayuda que se ejecuta con el comando HELP. Lo malo es que hay versiones queno incorpora tal ayuda (WINDOWS XP sí lo incorpora).
+                Si ponemos help y el listado es demasiado largo podemos visualizarlo ventana a ventana poniendo: help | more. En WINDOWS XP, si queremos obtener
+                la ayuda de un comando determinado podemos obtenerla, introduciendo el comando y a continuación /? ó escribiendo help seguido del comando.
+                Por ejemplo: dir /? ó help dir. Esto nos sacara la ayuda del DOS sobre este comando.
+                </p>
+            </article>
+            </section>
+            <section class="main-section" id="Gestion_de_directores">
+            <header>Gestion de directores</header>
+            <article>
+                <p><strong>Comando:</strong> DIR <br>
+                <strong>Función:</strong> Lista todos los ficheros y directorios de la ruta en la que nos encontramos. Mediante parámetros podemos }
+                modificar ese listado.<br>
+                <strong>Sintaxis:</strong> DIR [unidad\directorio\fichero]<br>
+                <strong>Parámetros:</strong> Algunos de los parámetros que se pueden utilizar para modificar
+                el listado de archivos y directorios son los siguientes:<br>
+                <div id="txt1"><strong>/P</strong> Muestra pantalla por pantalla el listado, para visualizar la pantalla siguiente
+                basta con pulsar una tecla. Al pulsar una tecla se procesara el siguiente bloque de listado y así sucesivamente.<br>
+                <strong>/O</strong> Ordena por el orden especificado:<br>
+                </div>
+                <div id="txt2"><code><strong>/ON</strong> Ordena por nombre en formato de lista detallada<br>
+                    <strong>/OE</strong> Ordena por extensión<br>
+                    <strong>/OS</strong> Ordena por tamaño<br>
+                    <strong>/OD</strong> Ordena por fecha<br>
+                    <strong>/OG</strong> Ordena poniendo agrupados todos los directorios después de los ficheros.<br>
+                    <strong>/O-X</strong> Ordena inversamente por el orden especificado por X<br>
+                    <strong>/S </strong>Muestra los archivos del directorio especificado y todos sus subdirectorios<br></code></div>
+                <strong>Comando:</strong> CD<br>
+                <strong>Función:</strong> Permite cambiar de un directorio activo a otro.<br>
+                <strong>Sintaxis:</strong> CD [unidad:]\[ruta]\[directorio]<br>
+                <strong>Observación:</strong> Si deseamos bajar un nivel en el árbol de directorios, sólo es necesario escribir cd..<br><br>
+                <strong>Comando:</strong> MD ó MKDIR<br>
+                <strong>Función:</strong> Crear directorios<br>
+                <strong>Sintaxis:</strong> MD [unidad\ruta\]"nombre"<br>
+                <strong>Observación:</strong> Si intentamos crear un directorio que ya estuviera creado nos da error. En algunos casos se puede hacer mkdir dir1\dir2 y sería
+                equivalente a la siguientes acciones: mkdir dir1; cd dir1; mkdir dir2; cd dir2; cd ..; cd..<br><br>
+                <strong>Comando:</strong> RD<br>
+                <strong>Función:</strong> Borra un directorio (sólo si se encuentra vacío).<br>
+                <strong>Sintaxis:</strong> RD [unidad\ruta\]"nombre"<br>
+                <strong>Parámetros:</strong> Los parámetros que se pueden utilizar con este comando son:<br>
+                <div id="txt3"><strong>/S</strong> Elimina todo el directorio a borrar aunque no esté vacío, pero pide confirmación.<br>
+                <strong>/Q</strong> No pide confirmación para eliminar un árbol de directorios cuando se utiliza junto con la opción /S.
+                </div>
+                <p>
+            </article>
+            </section>
+            <section class="main-section" id="Gestion_de_archivos">
+            <header>Gestion de archivos</header>
+            <p>
+                <strong>Comando:</strong> TYPE<br>
+                <strong>Función:</strong> Ver el contenido de archivos de texto, haciendo un listado (no permite el uso de comodines).<br>
+                <strong>Sintaxis:</strong> TYPE [unidad:]\[ruta]\[directorio]\"archivo"<br><br>
+                <strong>Comando:</strong> PRINT<br>
+                <strong>Función:</strong> Imprime archivo de texto.<br>
+                <strong>Sintaxis:</strong> : PRINT [unidad:]\[ruta]\[directorio]\"archivo"<br><br>
+                <strong>Comando:</strong> COPY<br>
+                <strong>Función:</strong> Copia el fichero origen al fichero destino.<br>
+                <strong>Sintaxis:</strong> copy "fichero-origen" "fichero-destino"<br>
+                <strong>Observación:</strong> Para juntar varios archivos, hay que especificar un único archivo destino y los archivos origen ponerlos en el formato:
+                archivo1+archivo2+archivo3. Si el archivo destino existe, pide confirmación de sobreescritura de dicho archivo. Si queremos que no nos
+                pida confirmación, deberemos usar el parámetro /Y para omitir dicha confirmación.<br><br>
+                <strong>Comando:</strong> REN o RENAME<br>
+                <strong>Función:</strong> Renombra un fichero. Dará error si existe un fichero que tenga el mismo nombre dentro del mismo directorio.
+                Con este comando se pueden utilizar los comodines del dir.<br>
+                <strong>Sintaxis:</strong> rename "nombre-actual" "nombre-nuevo"<br>
+                <strong>Comando:</strong> MOVE<br>
+                <strong>Función:</strong> Este comando mueve ficheros de un directorio a otro.<br>
+                <strong>Sintaxis:</strong> move [/Y] "origen" "destino" donde /Y es un parámetro que poniéndolo, el move moverá ficheros sin preguntar la confirmación de
+                reemplazo a otros archivos que se puedan llamar de la misma forma al directorio de destino. En caso de no especificarse,
+                MSDOS pedirá una confirmación de reemplazo de ficheros.<br>
+                <strong>Comando:</strong> DEL ó ERASE<br>
+                <strong>Función:</strong> Se encarga de borrar uno o varios archivos. Se pueden utilizar comodines.
+                <strong>Sintaxis:</strong> del [unidad:]\[ruta]\[directorio]\"archivo"<br>
+                Parámetros:Algunos de los parámetros que se pueden utilizar con este comando son:<br>
+            <div id="txt4"><strong>/P</strong> Pide confirmación antes de eliminar cada archivo.<br>
+                <strong>/F</strong> Fuerza la eliminación de los archivos de sólo lectura.<br><br>
+            </div>
+            <strong>Comando:</strong> FC<br>
+            <strong>Función:</strong> Compara dos ficheros y verifica si las copias son exactas.<br>
+            <strong>Sintaxis:</strong> FC fichero1 fichero2<br><br>
+            <strong>Comando:</strong> XCOPY<br>
+            <strong>Función:</strong> Copia un directorio entero con subdirectorios y ficheros incluidos. Recibe el nombre del directorio a copiar y opcionalmente el
+            directorio destino. Admite también una serie de parámetros.<br>
+            <strong>Sintaxis:</strong> xcopy origen [destino]<br>
+            <strong>Parámetros:</strong> Los parámetros que admite son:<br>
+            <div id="txt5"><code><strong>/P :</strong> Pide confirmación de SI o NO antes de copiar cada archivo.<br>
+                <strong>/S :</strong> Indica que la copia debe hacerse extensiva a todos los subdirectorios, exceptuando los vacíos.<br>
+                <strong>/E :</strong> Igual que con el /S, sólo que copia también los directorios vacíos.<br>
+                <strong>/W :</strong> Espera la confirmación antes de copiar los archivos.<br>
+                <strong>/V :</strong> Verifica si el archivo se ha copiado correctamente.<br>
+                <strong>/C :</strong> Continúa copiando aunque ocurran errores.<br>
+                <strong>/Q :</strong> No muestra los nombres de los archivos mientras está copiando.<br><br></code></div>
+            <strong>Comando:</strong> DOSKEY<br>
+            <strong>Función:</strong> Comando residente en memoria y una vez activado, permite visualizar los comandos de MSDOS introducidos con anterioridad a
+            través de la línea de comandos. Las flechas de arriba y abajo recuperan los comandos, la tecla de escape limpia lo que hubiese escrito
+            en la línea de comandos, F7 muestra los comandos usados, pulsando las teclas Alt + F7 se borran los comandos utilizados como si acabásemos
+            de abrir el terminal DOS.<br><br>
+            <strong>Comando:</strong> EDIT<br>
+            <strong>Función:</strong> Editor de texto de MSDOS con una interfaz gráfica. Permite visualizar cualquier archivo que contenga texto.<br>
+            <strong>Sintaxis:</strong> edit [unidad:]\[ruta]\[directorio]\"archivo.ext (solo de texto)"<br>
+            <strong>Ejemplo:</strong> c:\>edit fichero.txt<br>
+            Con esto se nos abriría el editor de texto del MSDOS con el archivo fichero.txt. En caso de que el nombre de archivo pasado
+            como parámetro al edit no exista, el edit abrirá un archivo nuevo en blanco almacenado con ese nombre pero de forma temporal,
+            con lo cual luego hay que guardarlo a través del menú que ofrece el edit.
+            </p>
+            </section>
+            <section class="main-section" id="Atributos_de_los_ficheros">
+            <header>Atributos de los ficheros</header>
+            <article>
+                <p>
+                Los atributos permiten asociar a los ficheros características especiales. Estas características de los ficheros son que sean
+                ficheros:<br>
+                1. <strong>De sólo lectura (R)</strong>: Protege la escritura y el borrado de un fichero. El fichero sólo puede ser leído.<br>
+                2. <strong>De archivo (A)</strong> : Sirve para saber si un determinado fichero ha sido o no modificado.<br>
+                3. <strong>Oculto (H)</strong>: Sirve para ocultar un fichero. Por ejemplo algunos archivos del sistema son ocultos.<br>
+                4. <strong>De sistema (S)</strong> : Sirve para identificar los archivos propios del sistema, los cuales sirven para cargar el SO.Para visualizar o
+                modificar los atributos de un fichero se utiliza el comando attrib. <br><br>
+                <strong>Comando:</strong> ATTRIB<br>
+                <strong>Función:</strong> Visualiza o modifica los atributos de un fichero.<br>
+                <strong>Sintaxis:</strong> attrib /sSintaxis: attrib "fichero" "+/-" "/h/s/a/r" (modificará los atributos de un fichero determinado)<br>
+                Obs: Con + establecemos un atributo a un fichero y con – lo borramos. Si no damos ningún parámetro lo que hacemos es visualizar los atributos.
+                </p>
+            </article>
+            </section>
+            <section class="main-section" id="Discos_y_disquetes">
+            <header>Discos y disquetes</header>
+            <article>
+                <p>
+                <strong>Comando:</strong>FORMAT<br>
+                <strong>Función:</strong> Formateado, o borrado completo de un disco o disquete.<br>
+                <strong>Sintaxis:</strong> format "unidad:"<br>
+                <strong>Parámetros:</strong> Si se quiere realizar un formato rápido se le puede dar el parámetro <strong>/Q</strong>.<br><br>
+                <strong>Comando:</strong> CHKDSK<br>
+                <strong>Función:</strong> Comprueba el estado de un disco o disquete correspondiente a la unidad introducida como parámetro y muestra un informe
+                de su estado.<br>
+                <strong>Sintaxis:</strong> chkdsk [unidad:] [fichero]<br>
+                <strong>Obs:</strong> Se puede utilizar con la opción <strong>/F</strong> ó <strong>/R</strong> que se encargan de encontrar los sectores dañados y recupera la información legible
+                en el disco.<br><br>
+                <strong>Comando:</strong> DISKCOPY<br>
+                <strong>Función:</strong> Copia el contenido total de un disco o disquete, sirve para hacer copias de seguridad. La unidad origen y destino puede ser
+                la misma, por ejemplo cuando copiamos un disquete.<br>
+                <strong>Sintaxis:</strong> diskcopy "unidad_origen:" "unidad_destino:"<br><br>
+                <strong>Comando:</strong> DISKCOMP<br>
+                <strong>Función:</strong> Compara el contenido de dos disquetes.<br>
+                <strong>Sintaxis:</strong> diskcomp[unidad1: [unidad2:]]<br><br>
+                <strong>Comando:</strong> LABEL<br>
+                <strong>Función:</strong> Permite crear, cambiar o borrar el nombre de la etiqueta que tiene asignado un disco o disquete cuando éste es formateado.
+                La etiqueta es un nombre asignado por el usuario para identificar el disco o disquete. Si ponemos sólo label, nos visualizaría el
+                nombre de la etiqueta de la unidad actual. Si especificamos la etiqueta la asignaría a la unidad actual.<br>
+                <strong>Sintaxis:</strong> label [unidad:] [etiqueta de volumen]<br><br>
+                <strong>Comando:</strong> VOL<br>
+                <strong>Función:</strong> Muestra la etiqueta y el número de serie que se le es asignado al disco o disquete, si están especificados. Este número de serie
+                no es modificable porque el sistema tiene que identificar de forma única el disco o disquete.<br>
+                <strong>Sintaxis:</strong> vol [unidad:]<br><br>
+                <strong>Comando:</strong> DEFRAG<br>
+                <strong>Función:</strong> Defragmenta y optimiza el disco, almacenando los ficheros en clusters secuenciales, lo queoptimiza el
+                rendimiento del sistema.<br>
+                <strong>Sintaxis:</strong> defrag<br>
+                <strong>Obs:</strong> No está en Windows XP, pero se encuentra con interfaz gráfica en el
+                menú Inicio, todos los programas, accesorios, herramientas del sistema, desfragmentador de disco.<br><br>
+                <strong>Comando:</strong> SCANDISK<br>
+                <strong>Función:</strong> Comprueba la integridad de los datos almacenados basándose en el estado del disco quealmacena estos datos.<br>
+                <strong>Sintaxis:</strong> scandisk<br>
+                <strong>Obs:</strong> No está en Windows XP.
+                </p>
+            </article>
+            </section>
+            <section class="main-section" id="Otros">
+            <header>Otros</header>
+            <article>
+                <p>
+                <strong>Comando:</strong> PROMPT<br>
+                <strong>Función:</strong> Muestra en pantalla el texto deseado. Admite una serie de signos que devuelven valores.<br>
+                <strong>Sintaxis:</strong> prompt [ texto o parametros ]<br>
+                <strong>Ejemplo:</strong> C:\>prompt El verdadero poder se encuentra en OrioN ScripT.$_ Hoy es dia $D y son las$._Te lee una nueva orden $p.<br>
+                <strong>Signos especiales:</strong> El signo <strong>$</strong> le indica a DOS que debe sustituir la cadena de carácter que le sigue por un valor
+                almacenado.<br>
+                <div id="txt6"><code><strong>$_</strong> Salto de línea (intro).<br>
+                    strong>$B</strong> Canalización ( | ).<br>
+                    <strong>$D</strong> Muestra en pantalla la fecha del sistema.<br>
+                    <strong>$H</strong> Elimina el carácter anterior.<br>
+                    <strong>$N</strong> Visualización de la unidad de trabajo por defecto.<br>
+                    <strong>$P</strong> Visualiza el directorio de trabajo incluyendo la unidad.<br>
+                    <strong>$T</strong> Muestra en pantalla la hora del sistema.<br>
+                    <strong>$V</strong> Muestra la versión del MSDOS con la que estamos operando.<br><br></code>
+                </div>
+                    <strong>Comando:</strong> CLS<br>
+                    <strong>Función:</strong> Limpia la pantalla, sólo queda el directorio en el que nos encontrábamos situado en la parte superior de la pantalla.<br>
+                    <strong>Sintaxis:</strong> cls<br><br>
+                    <strong>Comando:</strong> VER<br>
+                    <strong>Función:</strong> Este comando nos muestra en pantalla la versión que estamos usando del MSDOS.<br>
+                    <strong>Sintaxis:</strong> ver<br><br>
+                    <strong>Comando:</strong> DATE<br>
+                    <strong>Función:</strong> Muestra ó establece la fecha del sistema. En una líneaposterior nos facilita la posibilidad de cambiar la
+                    configuración de la fecha del sistema. Si no se quiere cambiar la fecha del sistema pulsar simplemente intro, en
+                    caso contrario, especificarla en formato dd-mm-aa. Si se quiere sólo consultar la fecha y que no ofrezca la posibilidad
+                    de cambiarla, deberemos añadirle el parámetro /T.<br>
+                    <strong>Sintaxis:</strong> date<br><br>
+                    <strong>Comando:</strong> TIME<br>
+                    <strong>Función:</strong> Muestra o establece la hora del ordenador. Si no se quiere rectificar la hora del sistema, simplemente pulsar intro.
+                    Si se quiere sólo consultar la hora y que no ofrezca la posibilidad de cambiarla, deberemos añadirle el parámetro /T.<br>
+                    <strong>Sintaxis:</strong> time<br><br>
+                    <strong>Comando:</strong> ECHO<br>
+                    <strong>Función:</strong> Muestra mensajes. También se puede activar o desactivar el comando de echo poniendo on ó off seguido del
+                    comando.<br>
+                    <code><strong>Sintaxis:</strong> echo mensaje<br><br></code>
+                    <code><strong>Comando:</strong> EXIT<br></code>
+                    <strong>Función:</strong> Cierra el intérprete de DOS en el que estemos.<br>
+                    <strong>Sintaxis:</strong> exit
+                    </p>
+            </article>
+            </section>
+            <section class="main-section" id="Redireccionamientos">
+            <header>Redireccionamientos</header>
+            <article>
+                <p>
+                MSDOS permite trabajar con otros dispositivos de entrada y salida aparte de la pantalla y el teclado como puede ser la impresora, etc.
+                Esto se realiza gracias a los redireccionamientos del DOS. Si queremos guardar el resultado de un comando en un fichero, podemos redireccionar
+                la salida del comando al fichero con un símbolo especial.<br><br>
+        
+                <strong>Operadores de redireccionamiento de la salida:</strong> Es el signo de (mayor que): “>”.
+                Este signo dirigirá elcomando introducido en el DOS hacia un dispositivo de entrada o salida, que puede ser un fichero. Por ejemplo,
+                si ponemos en elDOS: dir > salidadir.txtguardaremos la salida del comando dir en el fichero de texto salidadir.txt.<br><br>
+        
+                <strong>Operadores de redireccionamiento de entrada:</strong> Es el signo de (menor que): “<”. Indica al DOS quedebe tomar los datos de entrada desde un fichero que se especifique (por supuesto debe existir dichofichero) o de otro dispositivo, en lugar de tomarlos por teclado. MSDOS cuenta con 3 órdenes tomadasespecíficamente para este tipo de redireccionamientos, hablamos de: </p>
+                    <ul>
+                    <li><strong>SORT :</strong> Ordena los datos de entrada.</li>
+                    <li><strong>MORE:</strong> Visualiza el contenido de los datos de entrada pantalla a pantalla.</li>
+                    <li><strong>FIND:</strong> Localiza una cadena de caracteres específicos dentro de los datos de entrada.</li>
+                    </ul>
+                    <p>
+                    <strong>Operadores de redireccionamientos de concatenación a un fichero:</strong> Se usa el signo doble mayor que: “>>”. La diferencia entre este y
+                    el anterior ‘>’ de redireccionamiento a un fichero, radica que este redirecciona el resultado a un fichero y si este fichero contiene
+                    datos los nuevos datos los sitúa al final del fichero. En el anterior caso, cuando existe el fichero y contiene datos, se borran los
+                    datos que hubiera en el fichero para meter los nuevos datos.
+                    </p>
+            </article>
+            </section>
+            <section class="main-section" id="Filtros">
+            <header>Filtros</header>
+            <article>
+                <p>
+                MSDOS además de permitir redireccionar las órdenes a dispositivos de entrada y salida, también permiteredireccionar las ordenes a otras ordenes.
+                Para ello cuenta con los FILTROS, para identificarlos usa elsigno | (Alt Gr + 1). Los filtros con los que cuenta son: MORE, SORT, FIND.<br><br>
+        
+                <strong>MORE:</strong> Visualiza el resultado de una orden páginas a página si el resultado es mayor que la pantalla.<br><br>
+        
+                <strong>SORT:</strong> Se encarga de ordenar los datos de entrada. Por defecto los ordena según la primera letra de cada fila de los datos de salida.<br>
+                <strong>Sintaxis:</strong> SORT [/R] [/+numero]<br>
+                <div id="txt7"><strong>/R:</strong> Indica a MSDOS que debe invertir el orden de la ordenación (de mayor a menor).<br>
+                <strong>/+numero:</strong> Indica a MSDOS que en lugar de ordenar por el primer carácter, lo haga por el carácter que ocupe la posición
+                que se le especifique.<br>
+                <strong>/T:</strong> Redirige la salida al fichero especificado después de esta opción. <br><br>
+                </div>
+                <strong>FIND:</strong> Localiza una cadena de caracteres dentro de un fichero. Este filtro recibe como entrada datos dispuestos en filas y devuelve
+                sólo aquellas filas que contienen la secuencia de caracteres o la cadena que se ha especificado en la orden.<br>
+                Sintaxis: FIND [parámetro]“cadena” fichero<br>
+                <div id="txt8"><strong>/V:</strong> Muestra todas las líneas que no contienen la cadena.<br>
+                <strong>/C:</strong> Muestra sólo el número de líneas que contienen la cadena.<br>
+                <strong>/I:</strong> No distingue mayúsculas y minúsculas.<br>
+                <strong>/N:</strong> Muestra las líneas de texto con la cadena y los números de esas líneas<br>
+                </div>
+                </p>
+            </article>
+            </section>
+        
+            <section class="main-section" id="Reference">
+            <header>Reference</header>
+            <article>
+                <ul>
+                <li>
+                    All the documentation in this page is taken from
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide" target="_blank">MDN</a>
+                </li>
+                </ul>
+            </article>
+            </section>
+        </main>
+    </body>
+</html>
